@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with JavaScript</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  
+<div class="jumbotron text-center">
+ 
+</div>
+
+  <script>
+   //Types of Java
+   //String (wraped in apostrophes and ends with semi-colons) 
+   'this is my string';
+   'my second string';
+   "my name is shaina";
+
+    //Number (no apostrophes)
+    10 
+    500 
+
+    //Boolean (truthy / falsy) 
+    true; 
+    false;
+    
+
+    console.log(Boolean(''));  //<-- false
+
+    // specials
+    undefined;
+    //let user = 'chris';
+
+    //console.log(user);
+
+    null;
+    //let chris = null;
+
+    NaN; //not a number
+
+    // objects
+    const user = {
+      name: 'chris',
+      username: 'christoncode'
+      //key: 'value'
+    };
+
+    //arrays
+    const users = ['chris', 'nick', 'holly'];
+
+    console.log(user); //{name: "chris", username: "christoncode"}
+    console.log(users); //(3) ["chris", "nick", "holly"]
+    console.log(users[0]); //chris
+    console.log(users[1]); //nick
+
+    const luckyNumbers = [1, 43, 54, 132];
+    const whatever = ['chris', 1, 'holly'];
+
+    const superUsers = [
+      { name : 'chris'},
+      { name : 'nick'},
+      { name : 'holly'}
+    ];
+
+    console.log(superUsers[2].name); //holly
+
+
+    //declaring variables
+    var thing = 'first'; //old way
+
+    const otherThing = 'second'; //constant unless you reassign it... const otherThing = {
+      //name: 'chris'
+    //};
+    let newThing = 'third'; //assign new variable
+
+    //.......
+      let myVariable;
+      
+      myVariable = 'something';
+    
+  </script>
+
+</body>
+</html>

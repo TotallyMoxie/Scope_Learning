@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with JavaScript</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="jumbotron text-center">
+    <button type="button" class="btn btn-danger" onclick="saySomething('this is the first button')">My Button
+    <button type="button" class="btn btn-danger" onclick="saySomething('this is the second button')">My Second Button 
+    </button>
+  </div>
+
+  <script>
+    function saySomething(message = 'goodbye', whisper = false) {
+      if (whisper) {
+        console.log(`%c${message}`, `font-size:5px`);
+      }else {
+        console.log(message); // if you change it to goodbye, you are able to change the text in the console
+      }
+    }
+
+    saySomething('hello', true); //whisper is true 
+    saySomething();
+    saySomething();
+
+
+   /*  function squared(a) {
+      return a * a;
+    } */
+
+    /* const newSquared = squared(3);
+    console.log(newSquared); // 9 */
+
+
+   /*  const squared = function(a) {
+      return a * a;
+    } */ //call squared or squared() in console to get result
+
+    /* const otherSquared = squared; */
+
+    const squared = (a) => {
+      return a * a;
+    }
+    const otherSquared = squared;
+
+
+    
+
+    punch(); //this will work because of hoisting
+
+    function punch() {
+      console.log('punch');
+    } //hoisting....look more into things
+
+  </script>
+
+</body>
+</html> 

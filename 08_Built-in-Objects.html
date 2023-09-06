@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with JavaScript</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <script>
+    const first = 'this is a string';
+    const second = String('this is also a string');
+    /* console.log('this is a string'.toUpperCase()); //primitive
+    console.log(String('this is also a string').toUpperCase()); //object
+
+    console.log(first === second); */
+
+    console.groupCollapsed('Primitives vs Objects');
+      console.log(first === second); //true
+      console.log(
+        typeof first,
+        typeof String ('this is a string'),
+        typeof new String(), //object
+      );
+    console.groupEnd();
+
+    //strings
+    const sentence = 'this is my sentence.';
+    console.groupCollapsed('String');
+      console.log(first.toUpperCase()); //THIS IS A STRING
+      console.log(second.toLowerCase()); //this is also a string
+      console.log(sentence.startsWith('this is')); //true
+      //can also do this with emojis
+      console.log('🍺'.repeat(20));
+      console.log('look at me goo        '.trim());
+    console.groupEnd();
+
+
+    //numbers and math
+    console.groupCollapsed('Numbers and Math');
+    console.log(1.0.toString()); //needs two dots so javascript doesn't think it's a decimal
+    console.log((1).toString()); //1
+    console.log(Number.isInteger(5)); //true
+    console.log(Number.isInteger(5.42)); //false
+    console.log((1.562342).toFied(2)); //1.56
+    console.log(
+      Math.random().toFixed(2), //random number between 0 and 1
+      Math.ceil(1.56), //rounds up
+      Math.floor(6.3), //rounds down
+    )
+    console.groupEnd();
+
+
+    //arrays
+    const myArr = ['chris', 'nick', 'holly'];
+    console.groupCollapsed('Arrays');
+      console.log(myArr.length); //3
+      console.log(myArr.join('-')); //chris-nick-holly
+      console.log(myArr.push('joe'), myArr); //4, ['chris', 'nick', 'holly', 'joe']
+      console.log(myArr.pop('joe'), myArr);//'joe', ['chris', 'nick', 'holly'], don't really need to put 'joe' in there, it will take off the last item in the array
+
+      myArr.forEach(function(user){
+        console.log(user);
+      }); //chris, nick, holly 
+
+      myArr.forEach((user) => console.log(user)); //chris, nick, holly{
+    console.groupEnd();
+
+  </script>
+
+</body>
+</html>

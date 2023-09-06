@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with JavaScript</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  
+
+
+  <script>
+    //everything is an Object
+
+    const hero = {
+      name: 'Bruce Wayne',
+      aias: 'Batman',
+      catchphrase: 'To the Batcave!',
+      speak: function() { //method
+        return 'Attention!' + this.catchphrase;
+      },
+      attack: function(sounds) {
+        //return '(punches bad guy)' + sound;
+        return `(punches bad guy) ${sound}`; //template literal
+      }
+    };
+
+    //access a property
+    const thingToLookFor = 'alias';
+
+    console.log(hero.name);
+    console.log(hero['name']);
+    console.log(hero[thingToLookFor]);
+
+    //accessing methods (functions)
+    console.log(hero.speak);
+    console.log(hero.speak());
+    console.log(hero.attack('POWWWWWW!'));
+
+
+    'this is my string'.toUpperCase();//everything in JavaScript is an object
+    
+  </script>
+
+</body>
+</html>

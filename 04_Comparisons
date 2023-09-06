@@ -1,0 +1,77 @@
+<!-- Comparisons, if one value or variable is equal to another value or variable-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with JavaScript</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <script>
+    const original = 'shaina'
+    const clone = 'SHAINA'
+
+    console.groupCollapsed('String');
+      console.log(original == 'shaina'); // true
+      console.log(original == clone); // false
+      console.log(original == clone.toLowerCase()); // true
+    console.groupEnd();
+
+      const num1 = 10;
+      const num2 = '10';
+
+    console.groupCollapsed('Numbers');
+      console.log(num1 == num2); // true (coercion)
+      console.log(num1 === num2); // false (no coercion)
+      console.log(num1 != num2); // false (coercion)
+      console.log(num1 !== num2); // true (no coercion)
+    console.groupEnd();
+
+
+    let what; // undefined
+    let thing = null; //null
+
+    console.groupCollapsed('Booleans');
+      console.log(Boolean(original)); // true
+      console.log(Boolean('')); // false
+      console.log(Boolean(what)); // false
+      console.log(Boolean(thing)); // false (null)
+      console.log(Boolean(num1)); // true
+      console.log(Boolean({})); // true (empty object, same for arrays)
+    console.groupEnd();
+
+
+    const firstArr = [1, 2, 3];
+    const secondArr = [1, 2, 3];
+    const firstObj = { color: 'red' };
+    const secondObj = { color: 'red'};
+
+    console.groupCollapsed('Objects and Arrays');
+      console.log(firstArr === secondArr); // false
+      console.log(firstObj === secondObj); // false
+    console.groupEnd();
+
+    console.groupCollapsed('And Or');
+      console.log(Boolean('blah') && Boolean('thing')); // true
+      console.log(Boolean('blah') && Boolean('')); // false'
+      console.log(Boolean('blah') || Boolean('')); // true'
+      console.log(Boolean('') || Boolean('')); // false'
+      console.groupEnd();
+   
+
+  </script>
+
+</body>
+</html>

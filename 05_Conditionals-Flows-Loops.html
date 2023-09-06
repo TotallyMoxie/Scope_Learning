@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with JavaScript</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <div class = "dogs-list"></div>
+ 
+  <script>
+    /* const name = 'shaina';
+    const username = 'moxie';
+
+    //if (conditional)
+     if (name == 'shaina') {
+      alert('Hello!');
+    } else if  (name == 'holly'){
+      console.log('this is holly')
+    } else {
+      console.log('not shaina');
+    }  */
+
+    // for loop
+      const dogsList = document.querySelector('.dogs-list');
+      const dogs = [
+        { name: 'bruce', type: 'chihuahua' },
+        { name: 'chance', type: 'bernese' }
+      ];
+
+      /* for(let i = 0; i < dogs.length; i++) {
+       //console.log(dogs[i]);
+       //grab the dog
+       const dog = dogs[i];
+
+       const dogData = document.createElement('div');
+       dogData.classList.add('jumbotron');
+       dogData.innerText = `${dog.name} is a ${dog.type} `;  //bruce is a chihuahua, chance is a bernese
+       dogsList.appendChild(dogData);d
+      } */
+
+    //while loop (easier to read than for loop)
+    /* let i = 0;
+    while (i < dogs.length) {
+      //grab the dog
+      const dog = dogs[i];
+
+      const dogData = document.createElement('div');
+      dogData.classList.add('jumbotron');
+      dogData.innerText = `${dog.name} is a ${dog.type} `;  //bruce is a chihuahua, chance is a bernese
+      dogsList.appendChild(dogData);d
+
+      i++;
+    } */
+
+    //do while loop
+/*     let i = 0;
+    do {
+      //grab the dog
+      const dog = dogs[i];
+
+      const dogData = document.createElement('div');
+      dogData.classList.add('jumbotron');
+      dogData.innerText = `${dog.name} is a ${dog.type} `;  //bruce is a chihuahua, chance is a bernese
+      dogsList.appendChild(dogData);
+
+      i++;
+    } while (i < dogs.length); */
+
+    //for...of iterator
+    for (let dog of dogs) {
+      const dogData = document.createElement('div');
+      dogData.classList.add('jumbotron');
+      dogData.innerText = `${dog.name} is a ${dog.type} `;  //bruce is a chihuahua, chance is a bernese
+      dogsList.appendChild(dogData);
+    }
+
+  </script>
+
+</body>
+</html>
