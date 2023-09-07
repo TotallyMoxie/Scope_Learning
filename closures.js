@@ -1,3 +1,5 @@
+//closures in javascript are when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.
+
 /* const */ /* let myName = 'Shaina';
 
 function printName() {
